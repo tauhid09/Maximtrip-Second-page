@@ -1,0 +1,442 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navigation Bar */
+
+#nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+/* Navigation Bar Logo */
+
+#nav img {
+    width: 160px;
+    height: 35px;
+    box-shadow: 0px 8px 15px #0000004e;
+}
+
+/* Naviagtion Bar Search Bar */
+
+#nav #search {
+    border: 1.5px solid #ccd0d3;
+    height: 41px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#nav #search img {
+    margin: 10px;
+    width: 23px;
+    height: 23px;
+    box-shadow: none;
+}
+
+#nav #search input {
+    border: none;
+    width: 352px;
+    height: 39px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.search::placeholder {
+    color: #95abbd;
+    font-size: 15px;
+}
+
+/* Animation in Search Bar */
+
+.cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: #ffcc00;
+    margin-left: 2px;
+    animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+/* Naviation Bar : Contact */
+
+#contact {
+    width: 350px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#contact #number,
+#contact #mail {
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#contact #number img,
+#contact #mail img {
+    width: 20px;
+    height: 20px;
+    box-shadow: none;
+}
+
+#contact #number p,
+#contact #mail p {
+    font-size: 13px;
+}
+
+#contact #mail {
+    width: 160px;
+}
+
+#circle {
+    width: 32px;
+    height: 32px;
+    background-color: #CE3C3D;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#circle:hover {
+    transform: scale(1.1);
+}
+
+#circle img {
+    width: 20px;
+    height: 20px;
+    box-shadow: none;
+    transform: rotateZ(-20deg);
+}
+
+/* Main Section */
+main{
+    padding: 120px 16px 50px 16px;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+
+}
+section{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    padding: 0 150px;
+}
+.about-section,.form-section{
+    border-radius: 10px;
+    box-shadow: 1px 1px 15px #00000016;
+}
+.about-section{
+    /* width: 60%; */
+    height: 100%;
+    background-color: #ffffff;
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image{
+    width: 93%;
+    height: 70%;
+    border-radius: 15px;
+    background-image: url(images/holidaypackage/1img.png);
+    background-position: center;
+    background-size: cover;
+}
+.about{
+    width: 93%;
+    height: 30%;
+}
+.title{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.title h1{
+    font-size: 28px;
+    color: #1E2939;
+}
+.title-section{
+    overflow: hidden;
+    width: 80%;
+    height: 45px;
+}
+.title-section ul{
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+.title-section ul li{
+    list-style: none;
+}
+.title-section ul li button{
+    height: 45px;
+    border: none;
+    background-color: white;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.1s ease-in;
+    border-bottom: 3.5px solid white ;
+    color: #6A7282;
+}
+.title-section ul li .active{
+    border-bottom: 3.5px solid #CE3C3D;
+    color: #CE3C3D;
+}
+.description-box{
+    border-top: 2px solid #E5E7EB;
+    width: 100%;
+    height: 80px;
+    position: relative;
+}
+.description{
+    position:absolute;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    display: grid;
+    align-items: center;
+    justify-content: flex-start;
+    color: #1E2939;
+    
+}
+.description h2{
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.form-section{
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+}
+.form-title{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    /* border: 1px solid black; */
+    background-color: #CE3C3D;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.form-title h2{
+    color: white;
+    font-weight: 600;
+}
+
+.form-input{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-input input,.form-input select,.form-input #submit{
+    width: 85%;
+    height: 60px;
+    margin: 10px 0;
+    border: 2px solid #c0c0c1;
+    padding-left: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+.form-input input::placeholder{
+    font-size: 18px;
+    color: #95abbd;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.form-input input[type = "text"]:focus,
+.form-input input[type = "date"]:focus,
+.form-input input[type = "tel"]:focus,
+.form-input input[type = "email"]:focus,
+.form-input select:focus{
+    outline: none;
+    border: 2px solid blue;
+}
+
+.form-input #submit {
+    background-color: #CE3C3D;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    transition: 0.2s ease-out;
+}
+.form-input #submit:hover{
+    background-color: #F54900;
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+
+/* Fotter */
+
+#fotter {
+    z-index: 10;
+    bottom: -15%;
+    position: absolute;
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    background: #f8f9fa;
+    border-top: 2px solid #CE3C3D;
+}
+
+#link {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+
+#link h3 {
+    color: #364153;
+    font-size: 16px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.icon img {
+    width: 20px;
+    height: 20px;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+#copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #364153;
+}
+
+#copyright span {
+    font-weight: 600;
+    color: #364153;
+}
+
+
+/* Responsive Screen : 480px */
+
+@media (max-width: 480px) {
+    #nav {
+        min-height: 12vh;
+        padding: 10px;
+        gap: 10px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    #nav img {
+        width: 100px;
+        height: 22px;
+    }
+    
+    #nav #search {
+        width: 69%;
+    }
+    
+    #contact {
+        visibility: hidden;
+    }
+
+    
+    section{
+        grid-template-columns: 90%;
+    }
+
+    .title-section{
+        overflow: scroll;
+    }
+    
+    #fotter {
+        padding: 20px 15px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+    
+
+    
+    #link h3 {
+        font-size: 13px;
+    }
+    
+    .icon {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .icon img {
+        width: 16px;
+        height: 16px;
+    }
+    
+    #copyright p {
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
