@@ -173,7 +173,7 @@
 
     .about-section {
         /* width: 60%; */
-        height: 83vh;
+        height:84vh;
         background-color: #ffffff;
         display: flex;
         justify-content: center;
@@ -269,7 +269,7 @@
     /* Form Section */
 
     .form-section {
-        height: 82vh;
+        height: 84vh;
         background-color: rgb(255, 255, 255);
     }
 
@@ -336,7 +336,7 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         border: none;
         transition: 0.2s ease-out;
-        margin-bottom:20px ;
+        margin-bottom: 20px;
     }
 
     .form-input #submit:hover {
@@ -413,10 +413,18 @@
 
     /* Tablet (max-width: 1024px) */
     @media (max-width: 1024px) {
+        #nav #search {
+            width: 400px;
+        }
+
         section {
             grid-template-columns: 65% 33%;
             padding: 0 3%;
         }
+        .about-section,.form-section {
+        /* width: 60%; */
+        height: 98vh;
+    }
 
         .title-section {
             /* overflow: scroll; */
@@ -494,6 +502,11 @@
         .form-title h2 {
             font-size: 2.1vw;
         }
+
+        .form-section {
+            height: 90vh;
+        }
+
 
         .form-input input,
         .form-input select,
